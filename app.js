@@ -11,7 +11,7 @@ function creatWindow() {
         height: 600
     });
 
-    mainWindow.loadURL('file:/../index.html');
+    mainWindow.loadURL('file:/Users/rengar/Documents/vscode_工作区/electron/index.html');
     mainWindow.webContents.openDevTools();
     mainWindow.on('close', () => {
         mainWindow = null;
@@ -22,7 +22,7 @@ function creatWindow() {
 }
 app.on('ready', creatWindow);
 app.on('window-all-closed', () => {
-    qpp.quit();
+    app.quit();
 });
 app.on('active', () => {
     if (win = null) {
